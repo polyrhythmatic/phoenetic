@@ -1,0 +1,22 @@
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0px;
+}
+
+#container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+#text-filter {
+  position:absolute; 
+  left:0;
+  top:0;
+}
+
+#canvas {
+  height: 100%;
+  width: auto;
+}

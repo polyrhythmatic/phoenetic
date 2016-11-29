@@ -1,0 +1,14 @@
+{
+  "name": "audio_sort_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "combine.js",
+  "scripts": {
+    "dev": "webpack --watch ./index.js bundle.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tone": "^0.8.0"
+  }
+}
