@@ -98,8 +98,9 @@
 	}
 
 	function filter(term){
+		term = term.toLowerCase();
 		circles.forEach(function(circle){
-			if(circle.name.includes(term) || term === ""){
+			if(circle.name.toLowerCase().includes(term) || term === ""){
 				circle.renderable = true;
 			} else {
 				circle.renderable = false;
