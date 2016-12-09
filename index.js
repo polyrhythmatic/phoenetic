@@ -33,7 +33,10 @@ for(var key in tsne){
 	circle.text.renderable = false;
 	circle.name = key;
 
-	circle.player = new Tone.Player("https://raw.githubusercontent.com/polyrhythmatic/phoenetic/master/samples/" + tsne[key].fileName.replace(".wav", ".mp3")).toMaster();
+	circle.player = new Tone.Player({
+		url: "https://raw.githubusercontent.com/polyrhythmatic/phoenetic/master/samples/" + tsne[key].fileName.replace(".wav", ".mp3"),
+		onload: loadCounter
+	}).toMaster();
 	
 	circle.on("mouseover", function(){
 		if(this.renderable){
@@ -49,6 +52,20 @@ for(var key in tsne){
 	stage.addChild(circle.text);
 
 	circles.push(circle);
+}
+
+let loaded = 0;
+function loadCounter(){
+	loaded ++;
+	console.log(loaded)
+	if(loaded >= 1430){
+		hideLoading();
+	}
+}
+
+function hideLoading(){
+	let loader = document.getElementById("loading");
+	loader.hidden = true;
 }
 
 function filter(term){
