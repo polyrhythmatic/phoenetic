@@ -33,7 +33,7 @@ for(var key in tsne){
 	circle.text.renderable = false;
 	circle.name = key;
 
-	circle.player = new Tone.Player("./samples/" + tsne[key].fileName.replace(".wav", ".mp3")).toMaster();
+	circle.player = new Tone.Player("https://raw.githubusercontent.com/polyrhythmatic/phoenetic/master/samples/" + tsne[key].fileName.replace(".wav", ".mp3")).toMaster();
 	
 	circle.on("mouseover", function(){
 		if(this.renderable){
